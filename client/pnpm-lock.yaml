@@ -11,6 +11,15 @@ dependencies:
   '@emotion/styled':
     specifier: ^11.11.0
     version: 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.25)(react@18.2.0)
+  '@types/facepaint':
+    specifier: ^1.2.3
+    version: 1.2.3
+  '@types/react-router-dom':
+    specifier: 5.3.3
+    version: 5.3.3
+  facepaint:
+    specifier: ^1.2.1
+    version: 1.2.1
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -20,6 +29,12 @@ dependencies:
   react-kakao-maps-sdk:
     specifier: ^1.1.21
     version: 1.1.21(react-dom@18.2.0)(react@18.2.0)
+  react-router:
+    specifier: ^6.16.0
+    version: 6.16.0(react@18.2.0)
+  react-router-dom:
+    specifier: 6.14.2
+    version: 6.14.2(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
   '@storybook/addon-essentials':
@@ -2610,6 +2625,16 @@ packages:
       '@babel/runtime': 7.23.1
     dev: true
 
+  /@remix-run/router@1.7.2:
+    resolution: {integrity: sha512-7Lcn7IqGMV+vizMPoEl5F0XDshcdDYtMI6uJLQdQz5CfZAwy3vvGKYSUk789qndt5dEC4HfSjviSYlSoHGL2+A==}
+    engines: {node: '>=14'}
+    dev: false
+
+  /@remix-run/router@1.9.0:
+    resolution: {integrity: sha512-bV63itrKBC0zdT27qYm6SDZHlkXwFL1xMBuhkn+X7l0+IIhNaH5wuuvZKp6eKhCD4KFhujhfhCT1YxXW6esUIA==}
+    engines: {node: '>=14.0.0'}
+    dev: false
+
   /@rollup/pluginutils@5.0.4:
     resolution: {integrity: sha512-0KJnIoRI8A+a1dqOYLxH8vBf8bphDmty5QvIm2hqm7oFCFYKCAZWWd2hXgMibaPsNDhI0AtpYfQZJG47pt/k4g==}
     engines: {node: '>=14.0.0'}
@@ -3814,6 +3839,10 @@ packages:
       '@types/serve-static': 1.15.3
     dev: true
 
+  /@types/facepaint@1.2.3:
+    resolution: {integrity: sha512-Im/T/LMrEMKySMuIhOovOGVdFLFP7wlrWWR9nl5laArHFQnik6xRfUWNr0khAQIGkqU8a/pTQPxycYnfwswCqw==}
+    dev: false
+
   /@types/find-cache-dir@3.2.1:
     resolution: {integrity: sha512-frsJrz2t/CeGifcu/6uRo4b+SzAwT4NYCVPu1GN8IB9XTzrpPkGuV0tmh9mN+/L0PklAlsC3u5Fxt0ju00LXIw==}
     dev: true
@@ -3830,6 +3859,10 @@ packages:
     dependencies:
       '@types/node': 20.8.2
     dev: true
+
+  /@types/history@4.7.11:
+    resolution: {integrity: sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==}
+    dev: false
 
   /@types/http-errors@2.0.2:
     resolution: {integrity: sha512-lPG6KlZs88gef6aD85z3HNkztpj7w2R7HmR3gygjfXCQmsLloWNARFkMuzKiiY8FGdh1XDpgBdrSf4aKDiA7Kg==}
@@ -3922,6 +3955,21 @@ packages:
     dependencies:
       '@types/react': 18.2.25
     dev: true
+
+  /@types/react-router-dom@5.3.3:
+    resolution: {integrity: sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==}
+    dependencies:
+      '@types/history': 4.7.11
+      '@types/react': 18.2.25
+      '@types/react-router': 5.1.20
+    dev: false
+
+  /@types/react-router@5.1.20:
+    resolution: {integrity: sha512-jGjmu/ZqS7FjSH6owMcD5qpq19+1RS9DeVRqfl1FeBMxTDQAGwlMWOcs52NDoXaNKyG3d1cYQFMs9rCrb88o9Q==}
+    dependencies:
+      '@types/history': 4.7.11
+      '@types/react': 18.2.25
+    dev: false
 
   /@types/react@18.2.25:
     resolution: {integrity: sha512-24xqse6+VByVLIr+xWaQ9muX1B4bXJKXBbjszbld/UEDslGLY53+ZucF44HCmLbMPejTzGG9XgR+3m2/Wqu1kw==}
@@ -5466,6 +5514,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /facepaint@1.2.1:
+    resolution: {integrity: sha512-oNvBekbhsm/0PNSOWca5raHNAi6dG960Bx6LJgxDPNF59WpuspgQ17bN5MKwOr7JcFdQYc7StW3VZ28DBZLavQ==}
+    dev: false
 
   /fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
@@ -7455,6 +7507,39 @@ packages:
       use-callback-ref: 1.3.0(@types/react@18.2.25)(react@18.2.0)
       use-sidecar: 1.1.2(@types/react@18.2.25)(react@18.2.0)
     dev: true
+
+  /react-router-dom@6.14.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-5pWX0jdKR48XFZBuJqHosX3AAHjRAzygouMTyimnBPOLdY3WjzUSKhus2FVMihUFWzeLebDgr4r8UeQFAct7Bg==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.7.2
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-router: 6.14.2(react@18.2.0)
+    dev: false
+
+  /react-router@6.14.2(react@18.2.0):
+    resolution: {integrity: sha512-09Zss2dE2z+T1D03IheqAFtK4UzQyX8nFPWx6jkwdYzGLXd5ie06A6ezS2fO6zJfEb/SpG6UocN2O1hfD+2urQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.7.2
+      react: 18.2.0
+    dev: false
+
+  /react-router@6.16.0(react@18.2.0):
+    resolution: {integrity: sha512-VT4Mmc4jj5YyjpOi5jOf0I+TYzGpvzERy4ckNSvSh2RArv8LLoCxlsZ2D+tc7zgjxcY34oTz2hZaeX5RVprKqA==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.9.0
+      react: 18.2.0
+    dev: false
 
   /react-style-singleton@2.2.1(@types/react@18.2.25)(react@18.2.0):
     resolution: {integrity: sha512-ZWj0fHEMyWkHzKYUr2Bs/4zU6XLmq9HsgBURm7g5pAVfyn49DgUiNgY2d4lXRlYSiCif9YBGpQleewkcqddc7g==}
