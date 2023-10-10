@@ -12,11 +12,12 @@
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrder": [
     "^react",
-    "^(@/types|@/utils|@/apis|@/hooks)(/?)(.*)$",
-    "^(@/components|@/pages)(/?)(.*)$",
-    "^(@/styles|@/assets)(/?)(.*)$",
     "^@[^/]+/(.*)$",
     "<THIRD_PARTY_MODULES>",
+    "^(@/types|@/utils|@/apis|@/hooks|@/constants)(/?)(.*)$",
+    "^(@/components|@/pages)(/?)(.*)$",
+    "^(@/styles|@/assets)(/?)(.*)$",
+    "(./index|./style)",
     "^~"
   ],
   "importOrderSortSpecifiers": true,
