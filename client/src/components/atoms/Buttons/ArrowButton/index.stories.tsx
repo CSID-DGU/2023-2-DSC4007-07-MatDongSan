@@ -1,12 +1,12 @@
-import { DIRECTION } from '@/constants';
-
 import type { Meta, StoryObj } from '@storybook/react';
+
+import { DIRECTION } from '@/constants';
 
 import { ArrowButton } from './index';
 
 const meta = {
   component: ArrowButton,
-  title: 'atoms/ArrowButton',
+  title: 'atoms/Buttons/ArrowButton',
   tags: ['autodocs'],
   argTypes: {
     direction: {
