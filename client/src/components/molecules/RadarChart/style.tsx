@@ -1,3 +1,6 @@
+import { CSSProperties } from 'react';
+
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 export const Center = styled.div`
@@ -81,4 +84,19 @@ export const SubText = styled.p`
   z-index: 0;
   color: rgba(49, 184, 94, 0.7);
   font-size: 0.75rem;
+`;
+
+interface IconProps {
+  top: CSSProperties['top'];
+  left: CSSProperties['left'];
+}
+export const IconBox = styled.div<IconProps>`
+  ${({ top, left }) => {
+    return css`
+      top: ${top};
+      left: ${left};
+
+      position: absolute;
+    `;
+  }}
 `;
