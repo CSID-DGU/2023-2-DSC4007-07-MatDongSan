@@ -1,7 +1,6 @@
-import { RADAR_ICON_SORUCE, RADAR_ICON_TYPE } from '@/constants';
+import { RADAR_ICON_SORUCE } from '@/constants';
 
 import { Marker } from '@/components/atoms/Markers';
-import { RadarMarker } from '@/components/atoms/Markers/RadarMarker';
 
 import * as Style from './style';
 
@@ -14,10 +13,11 @@ export const RadarChart = () => {
           <Marker image={RADAR_ICON_SORUCE.school.image}>
             <Marker.Tooltip text='휘카페' distance='70m' />
           </Marker>
-          {/* <RadarMarker text='학교' distance='70' type={RADAR_ICON_TYPE.SCHOOL} /> */}
         </Style.IconBox>
         <Style.IconBox top={'50px'} left={'10px'}>
-          <RadarMarker text='지하철' distance='90' type={RADAR_ICON_TYPE.SUBWAY} />
+          <Marker image={RADAR_ICON_SORUCE.subway.image}>
+            <Marker.Tooltip text='지하철' distance='30m' />
+          </Marker>
         </Style.IconBox>
         <Style.SubText>7 Km</Style.SubText>
         <Style.Box>
