@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { DIRECTION } from '@/constants';
 
 import { ArrowButton } from '@/components/atoms/Buttons/ArrowButton';
+import { LineChart } from '@/components/atoms/LineChart';
 import { RadarChart } from '@/components/molecules/RadarChart';
 
 import * as Style from './style';
@@ -21,6 +22,7 @@ export const SideBar = () => {
         <ArrowButton direction={direction} onClick={handleShow} />
       </Style.ButtonBox>
       <RadarChart />
+      <LineChart />
     </Style.Container>
   );
 };

@@ -19,6 +19,8 @@ export const Icon = styled.svg<Props>`
   ${({ isRight }) => {
     return css`
       transform: scale(${isRight ? '1' : '-1'});
+
+      transition: transform 0.2s ease-in-out;
     `;
   }}
 `;
