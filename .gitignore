@@ -1,0 +1,10 @@
+*.mov
+*.zip
+*.shp
+*.shx
+*.prj
+*.dbf
+*.DS_Store
+*.pdf
+
+data/실거래가
