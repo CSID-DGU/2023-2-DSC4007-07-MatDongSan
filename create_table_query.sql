@@ -23,5 +23,5 @@ CREATE TABLE `capstone`.`rent_price` (
   `construction_year` VARCHAR(10) NULL COMMENT '건축년도',
   `contract_start` VARCHAR(8) NULL COMMENT '계약 시작일\n',
   `contract_end` VARCHAR(8) NULL COMMENT '계약 종료일',
-  `contract_type` INT NULL COMMENT '계약 구분( 0 : 기존, 1 : 신규, 2 : 갱신)',
-  `renewal_right` INT NULL COMMENT '갱신요구권 ( 0 : 미 사용, 1 : 사용)');
+  `contract_type` VARCHAR(10) NULL COMMENT '계약 구분( 0 : 기존, 1 : 신규, 2 : 갱신)',
+  `renewal_right` VARCHAR(10) NULL COMMENT '갱신요구권 ( 0 : 미 사용, 1 : 사용)');
