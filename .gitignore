@@ -7,9 +7,11 @@
 *.DS_Store
 *.pdf
 *.zip
+*.json
 
 data/실거래가
 data/건물도형_전체분_서울특별시_2023_9월
 data/도로명주소_전자지도_2023_9월
 
 module/
+document/
