@@ -9,6 +9,8 @@
 *.zip
 *.json
 *.xlsx
+*.cpg
+*.qmd
 
 data/실거래가
 data/건물도형_전체분_서울특별시_2023_9월
