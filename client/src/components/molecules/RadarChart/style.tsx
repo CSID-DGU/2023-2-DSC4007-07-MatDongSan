@@ -68,6 +68,24 @@ export const Container = styled.div`
   border: 1px dashed rgb(209, 214, 219);
 `;
 
+export const Outer = styled.div`
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: #fff;
+`;
+
+export const Title = styled.pre`
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 130%;
+`;
+
 export const Text = styled.p`
   position: absolute;
   top: 5%;
@@ -99,4 +117,12 @@ export const IconBox = styled.div<IconProps>`
       position: absolute;
     `;
   }}
+`;
+
+export const OOuter = styled.div`
+  padding-top: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

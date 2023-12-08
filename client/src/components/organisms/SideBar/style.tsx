@@ -26,11 +26,16 @@ export const Container = styled.div<Props>`
   }}
 `;
 
+export const Wrapper = styled.div`
+  height: 100%;
+  overflow: scroll;
+`;
+
 export const ButtonBox = styled.div`
   top: 50%;
   left: 100%;
 
   position: absolute;
-
+  z-index: 10;
   transform: translate(0, -50%);
 `;
