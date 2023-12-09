@@ -1,5 +1,4 @@
-import { Line } from 'react-chartjs-2';
-
+// import { Line } from 'react-chartjs-2';
 import {
   CategoryScale,
   Chart as ChartJS,
@@ -49,12 +48,16 @@ export const data = {
   ],
 };
 
-export const PriceChart = () => {
+interface Props {
+  type: string;
+  price: string;
+}
+export const PriceChart = ({ type, price }: Props) => {
   return (
     <Style.Container>
       <Style.Title>추정가</Style.Title>
-      <Style.Sub>약 1억 5,000만원</Style.Sub>
-      <Line options={options} data={data} />
+      <Style.Sub>{`${type} ${price}`}</Style.Sub>
+      {/* <Line options={options} data={data} /> */}
     </Style.Container>
   );
 };

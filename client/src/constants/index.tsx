@@ -42,3 +42,11 @@ export const MAP_ICON_SOURCE = {
     text: '주택',
   },
 };
+
+export const AGING_COLOR = {
+  warn: '#808080',
+  old: '#FF0000',
+  middle: '#FFC0CB',
+  new: '#0000FF',
+  modern: '#87CEEB',
+};

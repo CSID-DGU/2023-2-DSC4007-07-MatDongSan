@@ -26,3 +26,33 @@ export const Sub = styled.p`
   font-size: 18px;
   font-weight: 700;
 `;
+
+export const Year = styled.span`
+  width: 65px;
+  height: 20px;
+  margin-right: 10px;
+  margin-top: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 4px;
+  color: rgb(233, 155, 48);
+  background-color: rgb(255, 237, 211);
+`;
+
+export const Slope = styled.span`
+  width: 55px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 4px;
+  color: rgb(124, 66, 248);
+  background-color: rgb(233, 223, 255);
+`;
