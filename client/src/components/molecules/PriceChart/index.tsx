@@ -1,4 +1,5 @@
-// import { Line } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
+
 import {
   CategoryScale,
   Chart as ChartJS,
@@ -57,7 +58,7 @@ export const PriceChart = ({ type, price }: Props) => {
     <Style.Container>
       <Style.Title>추정가</Style.Title>
       <Style.Sub>{`${type} ${price}`}</Style.Sub>
-      {/* <Line options={options} data={data} /> */}
+      <Line options={options} data={data} />
     </Style.Container>
   );
 };

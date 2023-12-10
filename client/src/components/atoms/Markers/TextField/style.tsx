@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.p`
+export const Container = styled.div`
   padding-right: 5px;
   width: 50px;
 

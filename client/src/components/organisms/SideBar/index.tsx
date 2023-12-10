@@ -4,6 +4,7 @@ import { combineText } from '@/utils/combineText';
 
 import { Header } from '@/components/molecules/Header';
 import { PriceChart } from '@/components/molecules/PriceChart';
+import { RadarChart } from '@/components/molecules/RadarChart';
 
 import * as Style from './style';
 
@@ -50,8 +51,8 @@ export const SideBar = ({ building }: Props) => {
         />
         {/* <Style.ButtonBox>
           <ArrowButton direction={direction} onClick={handleShow} />
-        </Style.ButtonBox>
-        <RadarChart /> */}
+  </Style.ButtonBox>*/}
+        <RadarChart />
       </Style.Wrapper>
     </Style.Container>
   );
