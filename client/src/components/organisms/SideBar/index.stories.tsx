@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 
 import { SideBar } from './index';
 
@@ -16,16 +16,16 @@ const meta = {
 } satisfies Meta<typeof SideBar>;
 
 export default meta;
-type Story = StoryObj<typeof SideBar>;
+// type Story = StoryObj<typeof SideBar>;
 
-export const Primary = {
-  args: {
-    isShow: true,
-  },
-} satisfies Story;
+// export const Primary = {
+//   args: {
+//     isShow: true,
+//   },
+// } satisfies Story;
 
-export const Secondary = {
-  args: {
-    isShow: false,
-  },
-} satisfies Story;
+// export const Secondary = {
+//   args: {
+//     isShow: false,
+//   },
+// } satisfies Story;
