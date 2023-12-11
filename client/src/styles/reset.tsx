@@ -138,6 +138,7 @@ export const reset = css`
     box-sizing: border-box;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    font-family: 'HyundaiSansBold';
   }
   *::-webkit-scrollbar {
     display: none;
