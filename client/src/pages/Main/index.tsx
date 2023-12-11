@@ -16,13 +16,13 @@ import * as Style from './style';
 
 export const Main = () => {
   const [state, setState] = useState<any>({
-    leftBottomLat: 0,
-    leftBottomLon: 0,
-    rightTopLat: 0,
-    rightTopLon: 0,
+    leftBottomLat: 126.96153902391647,
+    leftBottomLon: 37.58654263412492,
+    rightTopLat: 126.97588140953926,
+    rightTopLon: 37.59472744554917,
   });
 
-  const [addressState, setAddressState] = useState<any>(null);
+  const [addressState, setAddressState] = useState<any>(1111010100100040014);
 
   function handleCenterChanged(map: any) {
     const { La: leftBottomLat, Ma: leftBottomLon }: any = map.getBounds().getSouthWest();
