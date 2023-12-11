@@ -20,9 +20,14 @@ export const getBuildings = async (
   rightTopLon: number,
   rightTopLat: number,
 ) => {
-  const response = await getpublicApi<BuildingsType[]>(
-    `/buildings?leftBottomLon=${leftBottomLon}&leftBottomLat=${leftBottomLat}&rightTopLon=${rightTopLon}&rightTopLat=${rightTopLat}`,
-  );
+  const response = await getpublicApi<BuildingsType[]>(`/map`, {
+    params: {
+      leftBottomLon: leftBottomLon,
+      leftBottomLat: leftBottomLat,
+      rightTopLon: rightTopLon,
+      rightTopLat: rightTopLat,
+    },
+  });
 
   return response.data;
 };
@@ -38,7 +43,7 @@ export const useGetBuildings = ({
   rightTopLon: number;
   rightTopLat: number;
 }) => {
-  const { data = mock1 } = useQuery(['buildings'], () =>
+  const { data = mock1 } = useQuery(['buildings', leftBottomLon, leftBottomLat, rightTopLon, rightTopLat], () =>
     getBuildings(leftBottomLon, leftBottomLat, rightTopLon, rightTopLat),
   );
 

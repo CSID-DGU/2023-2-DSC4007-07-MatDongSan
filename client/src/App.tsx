@@ -2,6 +2,7 @@ import { RouterProvider } from 'react-router-dom';
 
 import { ThemeProvider } from '@emotion/react';
 import { QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 import { queryClient } from './react-query/queryClient';
 import { router } from './routes/router';
@@ -14,6 +15,7 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <QueryClientProvider client={queryClient}>
+          <ReactQueryDevtools initialIsOpen={false} />
           <GlobalStyle />
           <RouterProvider router={router} />
         </QueryClientProvider>

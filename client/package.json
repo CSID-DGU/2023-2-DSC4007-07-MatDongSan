@@ -30,6 +30,7 @@
     "axios": "1.2.1"
   },
   "devDependencies": {
+    "@tanstack/react-query-devtools": "4.20.4",
     "@babel/preset-env": "^7.23.2",
     "@storybook/addon-essentials": "7.4.5",
     "@storybook/addon-interactions": "7.4.5",

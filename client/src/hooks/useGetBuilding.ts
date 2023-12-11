@@ -20,13 +20,17 @@ interface BuildingType {
   rent: number;
 }
 export const getBuilding = async (address_id: string) => {
-  const response = await getpublicApi<BuildingType>(`/buildings/address_id=${address_id}`);
+  const response = await getpublicApi<BuildingType>(`map/building`, {
+    params: {
+      address_id: address_id,
+    },
+  });
 
   return response.data;
 };
 
 export const useGetBuilding = (address_id: string) => {
-  const { data = mock2 } = useQuery(['building'], () => getBuilding(address_id));
-  console.log(data);
+  const { data = mock2 } = useQuery(['building', address_id], () => getBuilding(address_id));
+
   return { data };
 };
