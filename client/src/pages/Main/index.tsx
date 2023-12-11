@@ -49,7 +49,8 @@ export const Main = () => {
         <Map
           center={{ lat: 37.59064170921582, lng: 126.96879769636863 }}
           style={{ width: '100%', height: '100%' }}
-          onCenterChanged={handleCenterChanged}
+          onDragEnd={handleCenterChanged}
+          onZoomChanged={handleCenterChanged}
         >
           <MarkerClusterer averageCenter minLevel={3}>
             {buildings.map(({ address_id, shape, lat, lon, construction_year, rent_type, deposit, rent }) => {
