@@ -47,9 +47,9 @@ export const PriceChart = ({ chartData }: Props) => {
 
   const jeonPrice = jeonList.map((item: any) => parseInt(item.deposit));
 
-  const wolseList = chartData
-    ?.filter((item: any) => item.rent_type === '월세')
-    .map((item: any) => `월세 ${item.deposit}/${item.rent}`);
+  const wolseList = chartData?.filter((item: any) => item.rent_type === '월세');
+  const wolsePrice = wolseList.map((item: any) => `월세 ${item.deposit}/${item.rent}`);
+  const wolseLabel = wolseList.map((item: any) => item.date);
 
   const labels = jeonList.map((item: any) => item.date);
 
@@ -67,14 +67,18 @@ export const PriceChart = ({ chartData }: Props) => {
 
   return (
     <Style.Container>
-      <Style.Title>전세</Style.Title>
-      <Style.Sub>{`전세 ${combineText('전세', jeonPrice[jeonPrice.length - 1], 0)}`}</Style.Sub>
-      <Line options={options} data={data} />
+      {jeonList.length !== 0 && (
+        <>
+          <Style.Title>전세</Style.Title>
+          <Style.Sub>{`전세 ${combineText('전세', jeonPrice[jeonPrice.length - 1], 0)}`}</Style.Sub>
+          <Line options={options} data={data} />
+        </>
+      )}
       <Style.Label>월세</Style.Label>
       <Style.List>
-        {wolseList?.map((item: any, index: number) => (
+        {wolsePrice?.map((item: any, index: number) => (
           <Style.Item>
-            <Style.Year>{`${labels[index]}년`}</Style.Year>
+            <Style.Year>{`${wolseLabel[index]}년`}</Style.Year>
             <Style.Price>{item}</Style.Price>
           </Style.Item>
         ))}
