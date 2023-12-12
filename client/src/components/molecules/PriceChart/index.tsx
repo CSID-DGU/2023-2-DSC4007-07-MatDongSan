@@ -74,15 +74,19 @@ export const PriceChart = ({ chartData }: Props) => {
           <Line options={options} data={data} />
         </>
       )}
-      <Style.Label>월세</Style.Label>
-      <Style.List>
-        {wolsePrice?.map((item: any, index: number) => (
-          <Style.Item>
-            <Style.Year>{`${wolseLabel[index]}년`}</Style.Year>
-            <Style.Price>{item}</Style.Price>
-          </Style.Item>
-        ))}
-      </Style.List>
+      {wolseList.length !== 0 && (
+        <>
+          <Style.Label>월세</Style.Label>
+          <Style.List>
+            {wolsePrice?.map((item: any, index: number) => (
+              <Style.Item>
+                <Style.Year>{`${wolseLabel[index]}년`}</Style.Year>
+                <Style.Price>{item}</Style.Price>
+              </Style.Item>
+            ))}
+          </Style.List>
+        </>
+      )}
     </Style.Container>
   );
 };
