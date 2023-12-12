@@ -19,7 +19,7 @@ export const getPrice = async (address_id: string) => {
     },
   });
 
-  return response.data;
+  return response;
 };
 
 export const useGetPrice = (address_id: string) => {

@@ -26,7 +26,7 @@ export const getBuilding = async (address_id: string) => {
     },
   });
 
-  return response.data;
+  return response;
 };
 
 export const useGetBuilding = (address_id: string) => {

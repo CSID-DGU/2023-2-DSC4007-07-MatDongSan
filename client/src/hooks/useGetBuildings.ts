@@ -31,7 +31,7 @@ export const getBuildings = async (
     },
   });
 
-  return response.data;
+  return response;
 };
 
 export const useGetBuildings = ({
