@@ -6,6 +6,10 @@ import { getpublicApi } from '@/apis/publicApi';
 
 interface BuildingsType {
   address_id: string;
+  building_name: string;
+  slope_avg: number;
+  slope_max: number;
+  slope_min: number;
   shape: string;
   lat: number;
   lon: number;

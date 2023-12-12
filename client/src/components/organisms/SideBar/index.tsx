@@ -24,9 +24,10 @@ interface Props {
     rent_type: string;
     rent: number;
   };
+  price: any;
 }
 
-export const SideBar = ({ building }: Props) => {
+export const SideBar = ({ building, price }: Props) => {
   // const [isShow, setIsShow] = useState(true);
 
   // const direction = isShow ? DIRECTION.LEFT : DIRECTION.RIGHT;
@@ -48,6 +49,7 @@ export const SideBar = ({ building }: Props) => {
         <PriceChart
           type={building.rent_type}
           price={combineText(building.rent_type, building.deposit, building.rent)}
+          chartData={price}
         />
         {/* <Style.ButtonBox>
           <ArrowButton direction={direction} onClick={handleShow} />

@@ -12,7 +12,15 @@ interface Props extends PropsWithChildren {
 
 const MarkerMain = ({ children, image, onClick }: Props) => {
   return (
-    <Style.Container onClick={onClick}>
+    <Style.Container
+      onClick={onClick}
+      onMouseOver={(e: any) => {
+        e.currentTarget.parentElement.style.zIndex = '99';
+      }}
+      onMouseLeave={(e: any) => {
+        e.currentTarget.parentElement.style.zIndex = '1';
+      }}
+    >
       <Style.Image src={image} />
       {children}
     </Style.Container>

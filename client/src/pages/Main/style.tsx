@@ -16,3 +16,9 @@ export const MapBox = styled.div`
 
   position: absolute;
 `;
+
+export const Wrapper = styled.div`
+  &:hover {
+    z-index: 999;
+  }
+`;

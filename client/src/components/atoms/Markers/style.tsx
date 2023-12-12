@@ -18,6 +18,7 @@ export const Container = styled.button`
   &:hover {
     background-color: rgb(232, 76, 185);
     color: #fff;
+    z-index: 99;
   }
 
   &:hover > div {

@@ -11,6 +11,8 @@ import {
   Tooltip,
 } from 'chart.js';
 
+import { combineText } from '@/utils/combineText';
+
 import * as Style from './style';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
@@ -35,30 +37,48 @@ export const options = {
   },
 };
 
-const labels = ['2017', '2018', '2019', '2020', '2021', '2022', '2023'];
-
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: [1, 2, 3, 4, 5, 6, 7],
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
-    },
-  ],
-};
-
 interface Props {
   type: string;
   price: string;
+  chartData: any;
 }
-export const PriceChart = ({ type, price }: Props) => {
+export const PriceChart = ({ chartData }: Props) => {
+  const jeonList = chartData?.filter((item: any) => item.rent_type === '전세');
+
+  const jeonPrice = jeonList.map((item: any) => parseInt(item.deposit));
+
+  const wolseList = chartData
+    ?.filter((item: any) => item.rent_type === '월세')
+    .map((item: any) => `월세 ${item.deposit}/${item.rent}`);
+
+  const labels = jeonList.map((item: any) => item.date);
+
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: '전세',
+        data: jeonPrice,
+        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      },
+    ],
+  };
+
   return (
     <Style.Container>
-      <Style.Title>추정가</Style.Title>
-      <Style.Sub>{`${type} ${price}`}</Style.Sub>
+      <Style.Title>전세</Style.Title>
+      <Style.Sub>{`전세 ${combineText('전세', jeonPrice[jeonPrice.length - 1], 0)}`}</Style.Sub>
       <Line options={options} data={data} />
+      <Style.Label>월세</Style.Label>
+      <Style.List>
+        {wolseList?.map((item: any, index: number) => (
+          <Style.Item>
+            <Style.Year>{`${labels[index]}년`}</Style.Year>
+            <Style.Price>{item}</Style.Price>
+          </Style.Item>
+        ))}
+      </Style.List>
     </Style.Container>
   );
 };
