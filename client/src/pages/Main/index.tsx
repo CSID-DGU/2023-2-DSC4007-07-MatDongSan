@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { CustomOverlayMap, Map, MarkerClusterer, Polygon } from 'react-kakao-maps-sdk';
 
 import { MAP_ICON_SOURCE, MAP_ICON_TYPE } from '@/constants';
+import { mock1 } from '@/hooks/mock';
 import { useGetBuilding } from '@/hooks/useGetBuilding';
-import { useGetBuildings } from '@/hooks/useGetBuildings';
 import { useGetPrice } from '@/hooks/useGetPrice';
 import { calcAging } from '@/utils/calcAging';
 import { calcSlope } from '@/utils/calcSlope';
@@ -16,30 +16,12 @@ import { SideBar } from '@/components/organisms/SideBar';
 import * as Style from './style';
 
 export const Main = () => {
-  const [state, setState] = useState<any>({
-    leftBottomLat: 126.95198855680806,
-    leftBottomLon: 37.54295795260525,
-    rightTopLat: 127.04325523896432,
-    rightTopLon: 37.575684001127335,
-  });
-
   const [addressState, setAddressState] = useState<any>(1111010100100040014);
-
-  function handleCenterChanged(map: any) {
-    const { La: leftBottomLat, Ma: leftBottomLon }: any = map.getBounds().getSouthWest();
-    const { La: rightTopLat, Ma: rightTopLon }: any = map.getBounds().getNorthEast();
-    setState({
-      leftBottomLat,
-      leftBottomLon,
-      rightTopLat,
-      rightTopLon,
-    });
-  }
 
   function handleAdddress(address: string) {
     setAddressState(address);
   }
-  const { data: buildings } = useGetBuildings(state);
+  const buildings = mock1;
   const { data: building } = useGetBuilding(addressState);
   const { data: price } = useGetPrice(addressState);
 
@@ -47,12 +29,7 @@ export const Main = () => {
     <Style.Container>
       <SideBar building={building} price={price} />
       <Style.MapBox>
-        <Map
-          center={{ lat: 37.57445003663945, lng: 126.97358804955081 }}
-          style={{ width: '100%', height: '100%' }}
-          onDragEnd={handleCenterChanged}
-          onZoomChanged={handleCenterChanged}
-        >
+        <Map center={{ lat: 37.57445003663945, lng: 126.97358804955081 }} style={{ width: '100%', height: '100%' }}>
           <MarkerClusterer averageCenter minLevel={2}>
             {buildings.map(
               ({ address_id, shape, lat, lon, construction_year, rent_type, deposit, rent, slope_avg, slope_max }) => {

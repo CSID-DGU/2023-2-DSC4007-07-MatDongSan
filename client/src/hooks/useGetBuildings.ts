@@ -1,7 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { mock1 } from './mock';
-
 import { getpublicApi } from '@/apis/publicApi';
 
 interface BuildingsType {
@@ -47,7 +45,7 @@ export const useGetBuildings = ({
   rightTopLon: number;
   rightTopLat: number;
 }) => {
-  const { data = mock1 } = useQuery(['buildings', leftBottomLon, leftBottomLat, rightTopLon, rightTopLat], () =>
+  const { data = [] } = useQuery(['buildings', leftBottomLon, leftBottomLat, rightTopLon, rightTopLat], () =>
     getBuildings(leftBottomLon, leftBottomLat, rightTopLon, rightTopLat),
   );
 

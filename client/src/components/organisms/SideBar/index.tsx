@@ -9,21 +9,22 @@ import { RadarChart } from '@/components/molecules/RadarChart';
 import * as Style from './style';
 
 interface Props {
-  building: {
-    address_id: string;
-    sido: string;
-    sigungu: string;
-    eupmyeondong: string;
-    slope_avg: number;
-    slope_max: number;
-    deposit: number;
-    slope_min: number;
-    building_name: string;
-    shape: string;
-    construction_year: string;
-    rent_type: string;
-    rent: number;
-  };
+  building: any;
+  //  {
+  //   address_id: string;
+  //   sido: string;
+  //   sigungu: string;
+  //   eupmyeondong: string;
+  //   slope_avg: number;
+  //   slope_max: number;
+  //   deposit: number;
+  //   slope_min: number;
+  //   building_name: string;
+  //   shape: string;
+  //   construction_year: string;
+  //   rent_type: string;
+  //   rent: number;
+  // };
   price: any;
 }
 
