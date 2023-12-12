@@ -16,7 +16,7 @@ import { SideBar } from '@/components/organisms/SideBar';
 import * as Style from './style';
 
 export const Main = () => {
-  const [addressState, setAddressState] = useState<any>(1111010100100040014);
+  const [addressState, setAddressState] = useState<any>('1111010100100040014');
 
   function handleAdddress(address: string) {
     setAddressState(address);

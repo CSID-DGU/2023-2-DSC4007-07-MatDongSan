@@ -24,6 +24,6 @@ export const getPrice = async (address_id: string) => {
 
 export const useGetPrice = (address_id: string) => {
   const { data = priceMock } = useQuery(['price', address_id], () => getPrice(address_id));
-
+  console.log(data);
   return { data };
 };

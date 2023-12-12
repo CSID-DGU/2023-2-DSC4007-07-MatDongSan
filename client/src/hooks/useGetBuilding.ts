@@ -1,5 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 
+import { mock2 } from './mock';
+
 import { getpublicApi } from '@/apis/publicApi';
 
 interface BuildingType {
@@ -28,7 +30,7 @@ export const getBuilding = async (address_id: string) => {
 };
 
 export const useGetBuilding = (address_id: string) => {
-  const { data = {} } = useQuery(['building', address_id], () => getBuilding(address_id));
-
+  const { data = mock2 } = useQuery(['building', address_id], () => getBuilding(address_id));
+  console.log(data);
   return { data };
 };
